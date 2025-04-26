@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princess Hotel - Book Your Stay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="booking-container">
+            <div class="booking-form">
+                <h1>Book Your Stay</h1>
+                <div class="form-group">
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" required>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room Type</label>
+                    <select id="room-type" required>
+                        <option value="standard">Standard Room</option>
+                        <option value="deluxe">Deluxe Room</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <button type="submit" class="book-btn">Book Now</button>
+            </div>
+
+            <div class="room-preview">
+                <div class="room-card" data-room="standard">
+                    <img src="https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Standard Room">
+                    <h3>Standard Room</h3>
+                    <p class="price">$99/night</p>
+                    <ul class="amenities">
+                        <li>Queen Bed</li>
+                        <li>Free WiFi</li>
+                        <li>TV</li>
+                    </ul>
+                </div>
+                <div class="room-card" data-room="deluxe">
+                    <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Deluxe Room">
+                    <h3>Deluxe Room</h3>
+                    <p class="price">$149/night</p>
+                    <ul class="amenities">
+                        <li>King Bed</li>
+                        <li>Free WiFi</li>
+                        <li>TV</li>
+                        <li>Mini Bar</li>
+                    </ul>
+                </div>
+                <div class="room-card" data-room="suite">
+                    <img src="https://thafd.bing.com/th/id/OIP.gzaWT56GqQROL6xrgQ2X3AHaE7?rs=1&pid=ImgDetMain" alt="Suite">
+                    <h3>Suite</h3>
+                    <p class="price">$249/night</p>
+                    <ul class="amenities">
+                        <li>King Bed</li>
+                        <li>Living Room</li>
+                        <li>Free WiFi</li>
+                        <li>TV</li>
+                        <li>Mini Bar</li>
+                        <li>Balcony</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Booking Summary</h2>
+            <div id="booking-summary"></div>
+            <button class="confirm-btn">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
